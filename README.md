@@ -10,11 +10,11 @@
 
 ### WireFrame
 
-![WireFrame](wireframe-pic-1.png)
-![WireFrame Birthdate](wireframe-pic-2.png)
-![WireFrame HomePage](wireframe-pic-3.png)
-![WireFrame About Us](wireframe-pic-4.png)
-![WireFrame Journals](wirefram-pic-5.png)
+![WireFrame](./Images/wireframe-pic-1.png)
+![WireFrame Birthdate](./Images/wireframe-pic-2.png)
+![WireFrame HomePage](./Images/wireframe-pic-3.png)
+![WireFrame About Us](./Images/wireframe-pic-4.png)
+![WireFrame Journals](./Images/wireframe-pic-5.png)
 
 ## Architecture
 
