@@ -1,10 +1,11 @@
 {
   "name": "project-celestiality-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "**Author**: Angela Dzodzomenyo, Chris Reichert, Brandon Mizutani, Bionca Bond **Version**: 1.0.0 (Netlify: [Netlify] | Trello: [Trello](https://trello.com/b/EJEoICSx/cabb-group) | Heroku: [Heroku]()",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,18 @@
   },
   "homepage": "https://github.com/CABB-Group/project-celestiality-backend#readme",
   "dependencies": {
+    "auth0": "^2.37.0",
+    "axios": "^0.24.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "json": "^11.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^2.0.5",
     "mongodb": "^4.1.4",
-    "mongoose": "^6.0.12"
-  }
+    "mongoose": "^6.0.12",
+    "token": "^0.1.0",
+    "web": "0.0.2"
+  },
+  "devDependencies": {}
 }
