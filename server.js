@@ -15,14 +15,11 @@ app.use(cors());
 require('dotenv').config();
 
 //PORT assignment & assigned in .env
-const PORT = process.env.PORT || 3001;
-const deleteJournal = require('./src/celestials/modules/deleteJournal.js');
+const PORT = process.env.PORT || 3002;
+const deleteJournals = require('./src/celestials/modules/deleteJournal');
 const getJournal = require('./src/celestials/modules/getJournal.js');
 const updateJournal = require('./src/celestials/modules/updateJournal');
 const postJournal = require('./src/celestials/modules/postJournal.js');
-
-
-
 
 // MONGO/MONGOOSE CONNECTION
 // mongoose.connect(process.env.MONGO_CONNECTION_STRINGS, {
@@ -39,15 +36,15 @@ const postJournal = require('./src/celestials/modules/postJournal.js');
 // ROUTING
 
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
   res.send("test request received");
 });
 // /journal
 app.get('/journal', getJournal);
 app.post('/journal', postJournal);
-app.delete('/journal/:id', deleteJournal);
+app.delete('/journal/:id', deleteJournals);
 app.put('/journal/:id', updateJournal);
 
-app.get('*', (req,res) => res.status(404).send("we don't understand you"));
+app.get('*', (req, res) => res.status(404).send("we don't understand you"));
 
-app.listen(PORT, () => {console.log(`listening on ${PORT}`)});
+app.listen(PORT, () => console.log(`listening on ${PORT}`));
