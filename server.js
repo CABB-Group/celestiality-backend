@@ -11,6 +11,8 @@ app.use(express.json());
 const cors = require('cors');
 app.use(cors());
 
+const datesFunction = require('./src/celestials/modules/dates.js');
+datesFunction();
 // .env file
 require('dotenv').config();
 
