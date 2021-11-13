@@ -31,6 +31,5 @@
     "request": "^2.88.2",
     "token": "^0.1.0",
     "web": "0.0.2"
-  },
-  "devDependencies": {}
+  }
 }

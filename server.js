@@ -22,7 +22,7 @@ const deleteJournals = require('./src/celestials/modules/deleteJournal');
 const getJournal = require('./src/celestials/modules/getJournal.js');
 const updateJournal = require('./src/celestials/modules/updateJournal');
 const postJournal = require('./src/celestials/modules/postJournal.js');
-const HoriscopeAPI = require('./src/celestials/modules/apis.js');
+const convertDate = require('./src/celestials/modules/dates.js');
 
 
 // MONGO/MONGOOSE CONNECTION
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
   res.send("test request received");
 });
 //horoscope routes
-app.get('/horoscope', HoriscopeAPI );
+app.get('/horoscope', convertDate );
 
 // /journal
 app.get('/journal', getJournal);
