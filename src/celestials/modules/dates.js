@@ -1,8 +1,10 @@
 'use strict';
 
-const randomDate = '01-06-1990';
+const randomDate = '11-06-1990';
 
-function horiscopeName(dateEntry, year) {
+const horoscopeApi = require('./apis.js');
+
+function horoscopeName(dateEntry, year) {
   let AriesMin = new Date(`March 21 ${year}`).getTime();
   let AriesMax = new Date(`April 20 ${year}`).getTime();
   let TaurusMin = new Date(`April 21 ${year}`).getTime();
@@ -30,39 +32,50 @@ function horiscopeName(dateEntry, year) {
   // console.log('horiscopeName:', dateEntry);
   if (dateEntry <= AriesMax && dateEntry >= AriesMin) {
     console.log('Aries it is!');
+    return 'Aries';
   } else if (dateEntry <= TaurusMax && dateEntry >= TaurusMin) {
     console.log('Taurus it is!');
+    return 'Taurus';
   } else if ((dateEntry <= GeminiMax && dateEntry >= GeminiMin)) {
     console.log('Gemini it is!');
+    return 'Gemini';
   } else if (dateEntry <= CancerMax && dateEntry >= CancerMin) {
     console.log('Taurus it is!');
+    return 'Taurus';
   } else if (dateEntry <= LeoMax && dateEntry >= LeoMin) {
     console.log('Leo it is!');
+    return 'Leo';
   } else if (dateEntry <= VirgoMax && dateEntry >= VirgoMin) {
     console.log('Virgo it is!');
+    return 'Virgo';
   } else if (dateEntry <= LibraMax && dateEntry >= LibraMin) {
     console.log('Libra it is!');
+    return 'Libra';
   } else if (dateEntry <= ScoripoMax && dateEntry >= ScorpioMin) {
     console.log('Scorpio it is!');
+    return 'Scorpio';
   } else if (dateEntry <= SagittariusMax && dateEntry >= SagittariusMin) {
-    console.log('Scorpio it is!');
+    console.log('Saggitarius it is!');
+    return 'Saggitarius';
   } else if (dateEntry <= AquariusMax && dateEntry >= AquariusMin) {
     console.log('Aquarius it is!');
+    return 'Aquarius';
   } else if (dateEntry <= PiscesMax && dateEntry >= PiscesMin) {
     console.log('Pisces it is!');
+    return 'Pisces';
   } else if (dateEntry <= CapricornMax && dateEntry >= CapricornMin) {
     console.log('Capricorn it is!');
-    return('Capricorn');
+    return ('Capricorn');
   }
 
 }
 
-function convertDate() {
+async function convertDate(req, res) {
 
   let today = new Date(randomDate);
   let year = randomDate.slice(6, 10);
   let enteredDate = new Date(today).getTime();
-  let convertedDate = today.getTime();
+  // let convertedDate = today.getTime();
   // console.log('this is year', year);
   // console.log('today', today);
   // console.log('convertedDate: ', convertedDate);
@@ -70,9 +83,20 @@ function convertDate() {
   // console.log('enteredDate', enteredDate);
   // console.log('test',today.getMilliseconds());
   // console.log('convertDate: ', today.getTime());
-  horiscopeName(enteredDate, year);
+  let sign = horoscopeName(enteredDate, year);
+  // console.log('this is sign ', sign);
+  let horoscope = await horoscopeApi(sign);
+  // console.log('horoscope ', horoscope);
+  console.log(new UserInfo(sign, horoscope));
+  const user = new UserInfo(horoscope);
+  res.status(200).send(user);
 }
 
-
+class UserInfo {
+  constructor(userSign, userinfo) {
+    this.sign = userSign;
+    this.horoscope = userinfo;
+  }
+}
 
 module.exports = convertDate;
