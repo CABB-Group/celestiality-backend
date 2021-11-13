@@ -2,8 +2,6 @@
 
 const randomDate = '01-06-1990';
 
-
-
 function horiscopeName(dateEntry, year) {
   let AriesMin = new Date(`March 21 ${year}`).getTime();
   let AriesMax = new Date(`April 20 ${year}`).getTime();
@@ -54,7 +52,8 @@ function horiscopeName(dateEntry, year) {
     console.log('Pisces it is!');
   } else if (dateEntry <= CapricornMax && dateEntry >= CapricornMin) {
     console.log('Capricorn it is!');
-  };
+    return('Capricorn');
+  }
 
 }
 
@@ -71,9 +70,9 @@ function convertDate() {
   // console.log('enteredDate', enteredDate);
   // console.log('test',today.getMilliseconds());
   // console.log('convertDate: ', today.getTime());
-
   horiscopeName(enteredDate, year);
-
 }
+
+
 
 module.exports = convertDate;
