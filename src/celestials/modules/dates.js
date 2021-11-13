@@ -1,6 +1,9 @@
-'use strict';
+"use strict";
 
-const randomDate = '11-06-1990';
+
+//let axios = require('axios');
+const randomDate = "01-06-1990";
+
 
 const horoscopeApi = require('./apis.js');
 
@@ -96,6 +99,7 @@ class UserInfo {
   constructor(userSign, userinfo) {
     this.sign = userSign;
     this.horoscope = userinfo;
+
   }
 }
 

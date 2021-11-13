@@ -1,9 +1,7 @@
 'use strict';
+
 let axios = require('axios');
-
-
-
-
+let request = require('request');
 
 async function HoroscopeApi(sign, error, response, body) {
   // let request = require('request');
@@ -23,15 +21,11 @@ async function HoroscopeApi(sign, error, response, body) {
     let horoscopeAPICall = await axios.request(options)
     // console.log(horoscopeAPICall.data);
     return horoscopeAPICall.data
-
   }
 
   catch (error) {
     console.log(error);
   };
-
 }
 
-
 module.exports = HoroscopeApi;
-
