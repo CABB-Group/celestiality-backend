@@ -5,8 +5,6 @@ const randomDate = '01-06-1990';
 
 
 function horiscopeName(dateEntry, year) {
-  let yearB = year;
-  // console.log(yearB);
   let AriesMin = new Date(`March 21 ${year}`).getTime();
   let AriesMax = new Date(`April 20 ${year}`).getTime();
   let TaurusMin = new Date(`April 21 ${year}`).getTime();
@@ -29,10 +27,9 @@ function horiscopeName(dateEntry, year) {
   let AquariusMax = new Date(`February 19 ${year}`).getTime();
   let PiscesMin = new Date(`February 20 ${year}`).getTime();
   let PiscesMax = new Date(`March 21' ${year}`).getTime();
-  let CapricornMin = new Date(`December 23 ${year-1}`).getTime();
+  let CapricornMin = new Date(`December 23 ${year - 1}`).getTime();
   let CapricornMax = new Date(`January 20 ${year}`).getTime();
-  console.log('CapricornMin',CapricornMin);
-  console.log('horiscopeName:', dateEntry);
+  // console.log('horiscopeName:', dateEntry);
   if (dateEntry <= AriesMax && dateEntry >= AriesMin) {
     console.log('Aries it is!');
   } else if (dateEntry <= TaurusMax && dateEntry >= TaurusMin) {
@@ -65,15 +62,14 @@ function convertDate() {
 
   let today = new Date(randomDate);
   let year = randomDate.slice(6, 10);
-  console.log('today', today);
   let enteredDate = new Date(today).getTime();
-  
-  // console.log('this is year', year);
   let convertedDate = today.getTime();
-  console.log('convertedDate: ', convertedDate);
+  // console.log('this is year', year);
+  // console.log('today', today);
+  // console.log('convertedDate: ', convertedDate);
   // console.log(randomDate.toString());
-  console.log('enteredDate', enteredDate);
-  //   console.log('test',today.getMilliseconds());
+  // console.log('enteredDate', enteredDate);
+  // console.log('test',today.getMilliseconds());
   // console.log('convertDate: ', today.getTime());
 
   horiscopeName(enteredDate, year);
