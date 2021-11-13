@@ -12,7 +12,7 @@ const cors = require('cors');
 app.use(cors());
 
 const datesFunction = require('./src/celestials/modules/dates.js');
-datesFunction();
+// datesFunction();
 // .env file
 require('dotenv').config();
 

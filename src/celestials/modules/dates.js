@@ -1,6 +1,7 @@
-'use strict';
+"use strict";
 
-const randomDate = '01-06-1990';
+//let axios = require('axios');
+const randomDate = "01-06-1990";
 
 function horiscopeName(dateEntry, year) {
   let AriesMin = new Date(`March 21 ${year}`).getTime();
@@ -57,22 +58,27 @@ function horiscopeName(dateEntry, year) {
 
 }
 
-function convertDate() {
-
+function convertDate(req, res) {
   let today = new Date(randomDate);
   let year = randomDate.slice(6, 10);
   let enteredDate = new Date(today).getTime();
   let convertedDate = today.getTime();
-  // console.log('this is year', year);
-  // console.log('today', today);
-  // console.log('convertedDate: ', convertedDate);
-  // console.log(randomDate.toString());
-  // console.log('enteredDate', enteredDate);
-  // console.log('test',today.getMilliseconds());
-  // console.log('convertDate: ', today.getTime());
-  horiscopeName(enteredDate, year);
+  try {
+    // await axios.get('https:google.com')
+    console.log(req);
+
+    // console.log('this is year', year);
+    // console.log('today', today);
+    console.log("convertedDate: ", convertedDate);
+    // console.log(randomDate.toString());
+    // console.log('enteredDate', enteredDate);
+    // console.log('test',today.getMilliseconds());
+    // console.log('convertDate: ', today.getTime());
+    //horiscopeName(enteredDate, year);
+    res.status(200).send("dates.js works");
+  } catch (error) {
+    res.status(500).send("dates.js failed: ", error.message);
+  }
 }
-
-
 
 module.exports = convertDate;
