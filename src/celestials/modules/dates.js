@@ -1,47 +1,82 @@
 'use strict';
 
-const randomDate = '01-06-1985';
+const randomDate = '01-06-1990';
 
-let AriesMin = 'March 21';
-let AriesMax = 'April 19';
-// Taurus Dates: April 20-May 20
-// Gemini Dates: May 21-June 20
-// Cancer Dates: June 21-July 22
-// Leo Dates: July 23-August 22
-// Virgo Dates: August 23-September 22
-// Libra Dates: September 23-October 22
-// Scorpio Dates: October 23-November 21
-// Sagittarius Dates: November 22-December 21
-let CapricornMin = 'December 21';
-let CapricornMax = 'January 20';
-// Aquarius Dates: January 21-February 18
-// Pisces Dates: February 19-March 20
 
-function horiscopeName(dateEntry) {
-  let AriesMin = new Date('March 21');
-  let AriesMax = new Date('April 19');
-  let CapricornMin = (new Date('December 21,1984').getTime());
-  console.log('CapricornMin: ', CapricornMin);
-  let CapricornMax = (new Date('January 20,1985').getTime());
-  console.log('CapricornMax: ', CapricornMax);
+
+function horiscopeName(dateEntry, year) {
+  let yearB = year;
+  // console.log(yearB);
+  let AriesMin = new Date(`March 21 ${year}`).getTime();
+  let AriesMax = new Date(`April 20 ${year}`).getTime();
+  let TaurusMin = new Date(`April 21 ${year}`).getTime();
+  let TaurusMax = new Date(`May 21 ${year}`).getTime();
+  let GeminiMin = new Date(`May 22'${year}`).getTime();
+  let GeminiMax = new Date(`Jun 21 ${year}`).getTime();
+  let CancerMin = new Date(`June 22 ${year}`).getTime();
+  let CancerMax = new Date(`July 23 ${year}`).getTime();
+  let LeoMin = new Date(`July 24 ${year}`).getTime();
+  let LeoMax = new Date(`August 23 ${year}`).getTime();
+  let VirgoMin = new Date(`August 24 ${year}`).getTime();
+  let VirgoMax = new Date(`September 23 ${year}`).getTime();
+  let LibraMin = new Date(`September 24 ${year}`).getTime();
+  let LibraMax = new Date(`October 23 ${year}`).getTime();
+  let ScorpioMin = new Date(`October 24 ${year}`).getTime();
+  let ScoripoMax = new Date(`November 22 ${year}`).getTime();
+  let SagittariusMin = new Date(`November 23 ${year}`).getTime();
+  let SagittariusMax = new Date(`December 22 ${year}`).getTime();
+  let AquariusMin = new Date(`January 21 ${year}`).getTime();
+  let AquariusMax = new Date(`February 19 ${year}`).getTime();
+  let PiscesMin = new Date(`February 20 ${year}`).getTime();
+  let PiscesMax = new Date(`March 21' ${year}`).getTime();
+  let CapricornMin = new Date(`December 23 ${year-1}`).getTime();
+  let CapricornMax = new Date(`January 20 ${year}`).getTime();
+  console.log('CapricornMin',CapricornMin);
   console.log('horiscopeName:', dateEntry);
-  if (dateEntry <= CapricornMax && dateEntry >= CapricornMin) {
-    return console.log('Capricorn it is!');
-  } console.log('NOT Capricorn');
+  if (dateEntry <= AriesMax && dateEntry >= AriesMin) {
+    console.log('Aries it is!');
+  } else if (dateEntry <= TaurusMax && dateEntry >= TaurusMin) {
+    console.log('Taurus it is!');
+  } else if ((dateEntry <= GeminiMax && dateEntry >= GeminiMin)) {
+    console.log('Gemini it is!');
+  } else if (dateEntry <= CancerMax && dateEntry >= CancerMin) {
+    console.log('Taurus it is!');
+  } else if (dateEntry <= LeoMax && dateEntry >= LeoMin) {
+    console.log('Leo it is!');
+  } else if (dateEntry <= VirgoMax && dateEntry >= VirgoMin) {
+    console.log('Virgo it is!');
+  } else if (dateEntry <= LibraMax && dateEntry >= LibraMin) {
+    console.log('Libra it is!');
+  } else if (dateEntry <= ScoripoMax && dateEntry >= ScorpioMin) {
+    console.log('Scorpio it is!');
+  } else if (dateEntry <= SagittariusMax && dateEntry >= SagittariusMin) {
+    console.log('Scorpio it is!');
+  } else if (dateEntry <= AquariusMax && dateEntry >= AquariusMin) {
+    console.log('Aquarius it is!');
+  } else if (dateEntry <= PiscesMax && dateEntry >= PiscesMin) {
+    console.log('Pisces it is!');
+  } else if (dateEntry <= CapricornMax && dateEntry >= CapricornMin) {
+    console.log('Capricorn it is!');
+  };
 
 }
 
 function convertDate() {
 
   let today = new Date(randomDate);
-  let enteredDate = today.getTime();
-  //   let convertedDate = today.getDate();
-  //   console.log(convertedDate);
-  //   console.log(randomDate.toString());
+  let year = randomDate.slice(6, 10);
+  console.log('today', today);
+  let enteredDate = new Date(today).getTime();
+  
+  // console.log('this is year', year);
+  let convertedDate = today.getTime();
+  console.log('convertedDate: ', convertedDate);
+  // console.log(randomDate.toString());
+  console.log('enteredDate', enteredDate);
   //   console.log('test',today.getMilliseconds());
-  console.log('convertDate: ', today.getTime());
-  //   console.log(today.);
-  horiscopeName(enteredDate);
+  // console.log('convertDate: ', today.getTime());
+
+  horiscopeName(enteredDate, year);
 
 }
 
