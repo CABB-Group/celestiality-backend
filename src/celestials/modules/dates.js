@@ -91,8 +91,9 @@ async function convertDate(req, res) {
   let horoscope = await horoscopeApi(sign);
   // console.log('horoscope ', horoscope);
   console.log(new UserInfo(sign, horoscope));
-  const user = new UserInfo(horoscope);
-  res.status(200).send(user);
+  const user = new UserInfo(sign, horoscope);
+  let getDataArray = [user];
+  res.status(200).send(getDataArray);
 }
 
 class UserInfo {
