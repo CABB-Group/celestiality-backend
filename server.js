@@ -51,6 +51,7 @@ app.post('/journal', postJournal);
 app.delete('/journal/:id', deleteJournal);
 app.put('/journal/:id', updateJournal);
 app.get('/journalseed', getSeed);
+app.get('/clear', bombTheBase);
 app.get('*', (req, res) => res.status(404).send("we don't understand you"));
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
 
@@ -80,4 +81,17 @@ function getSeed (req,res){
     console.log('seeded:  ',entry);
   });
   res.status(200).send('Seeded data');
+}
+
+//clear the database
+async function bombTheBase(req, res) {
+  try {
+    await JournalModel.deleteMany({});
+    console.log('Database cleared')
+      ;
+    res.status(200).send('cleared');
+  }
+  catch (e) {
+    console.log('error:', e.message);
+  }
 }
