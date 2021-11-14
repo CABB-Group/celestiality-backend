@@ -1,0 +1,107 @@
+[
+    {
+        "basic_info": {
+            "name": "Chris Reichert",
+            "titles": [
+                "Leader | Python Software Developer | PMP | Project Manager"
+            ],
+            "social": [
+                {
+                    "name": "github",
+                    "url": "https://github.com/reichertc2",
+                    "class": "fab fa-github"
+                },
+                {
+                    "name": "linkedin",
+                    "url": "https://www.linkedin.com/in/christopher-reichert/",
+                    "class": "fab fa-linkedin"
+                }
+            ],
+            "image": "reichert-profile.jpg"
+        }
+    },
+    {
+        "basic_info": {
+            "name": "Chris Reichert",
+            "titles": [
+                "Leader | Python Software Developer | PMP | Project Manager"
+            ],
+            "social": [
+                {
+                    "name": "github",
+                    "url": "https://github.com/reichertc2",
+                    "class": "fab fa-github"
+                },
+                {
+                    "name": "linkedin",
+                    "url": "https://www.linkedin.com/in/christopher-reichert/",
+                    "class": "fab fa-linkedin"
+                }
+            ],
+            "image": "reichert-profile.jpg"
+        }
+    },
+        {
+            "basic_info": {
+                "name": "Chris Reichert",
+                "titles": [
+                    "Leader | Python Software Developer | PMP | Project Manager"
+                ],
+                "social": [
+                    {
+                        "name": "github",
+                        "url": "https://github.com/reichertc2",
+                        "class": "fab fa-github"
+                    },
+                    {
+                        "name": "linkedin",
+                        "url": "https://www.linkedin.com/in/christopher-reichert/",
+                        "class": "fab fa-linkedin"
+                    }
+                ],
+                "image": "reichert-profile.jpg"
+            }
+        },
+        {
+            "basic_info": {
+                "name": "Chris Reichert",
+                "titles": [
+                    "Leader | Python Software Developer | PMP | Project Manager"
+                ],
+                "social": [
+                    {
+                        "name": "github",
+                        "url": "https://github.com/reichertc2",
+                        "class": "fab fa-github"
+                    },
+                    {
+                        "name": "linkedin",
+                        "url": "https://www.linkedin.com/in/christopher-reichert/",
+                        "class": "fab fa-linkedin"
+                    }
+                ],
+                "image": "reichert-profile.jpg"
+            }
+        },
+        {
+            "basic_info": {
+                "name": "Chris Reichert",
+                "titles": [
+                    "Leader | Python Software Developer | PMP | Project Manager"
+                ],
+                "social": [
+                    {
+                        "name": "github",
+                        "url": "https://github.com/reichertc2",
+                        "class": "fab fa-github"
+                    },
+                    {
+                        "name": "linkedin",
+                        "url": "https://www.linkedin.com/in/christopher-reichert/",
+                        "class": "fab fa-linkedin"
+                    }
+                ],
+                "image": "reichert-profile.jpg"
+            }
+        }
+]

@@ -7,7 +7,7 @@ function getJournal(req, res) {
   console.log('getJournal');
   try {
     JournalModel.find((err, entry) => {
-      if (err) return res.status(500).send('No journals   FOR YOU!');
+      if (err) return res.status(500).send('No journals FOR YOU!');
       res.status(200).send(entry);
     }).clone();
     // Clone to allow re query the same request. Duplicate Query Execution
