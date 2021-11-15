@@ -74,16 +74,18 @@ function horoscopeName(dateEntry, year) {
 }
 
 async function convertDate(req, res) {
-
-  let today = new Date(randomDate);
-  let year = randomDate.slice(6, 10);
+  let {searchQuery}=req.query;
+  console.log('this is the searchQuery: ',searchQuery);
+// console.log('this randomDate', randomDate);
+  let today = new Date(searchQuery);
+  let year = searchQuery.slice(0, 4);
   let enteredDate = new Date(today).getTime();
   // let convertedDate = today.getTime();
-  // console.log('this is year', year);
-  // console.log('today', today);
+  console.log('this is year', year);
+  console.log('today', today);
   // console.log('convertedDate: ', convertedDate);
   // console.log(randomDate.toString());
-  // console.log('enteredDate', enteredDate);
+  console.log('enteredDate', enteredDate);
   // console.log('test',today.getMilliseconds());
   // console.log('convertDate: ', today.getTime());
   let sign = horoscopeName(enteredDate, year);
