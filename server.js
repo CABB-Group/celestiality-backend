@@ -45,6 +45,7 @@ app.get('/', (req, res) => {
 //horoscope routes
 app.get('/horoscope', convertDate );
 
+
 // /journal
 app.get('/journal', getJournal);
 app.post('/journal', postJournal);
