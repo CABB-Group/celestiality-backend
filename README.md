@@ -1,7 +1,7 @@
 # Celestiality
 
 **Author**: Angela Dzodzomenyo, Chris Reichert, Brandon Mizutani, Bionca Bond
-**Version**: 1.0.0 (Netlify: [Netlify] | Trello: [Trello](https://trello.com/b/EJEoICSx/cabb-group) | Heroku: [Heroku]()
+**Version**: 1.0.0 (Netlify: [Netlify](https://celestiality.netlify.app/) | Trello: [Trello](https://trello.com/b/EJEoICSx/cabb-group) | Heroku: [Heroku](https://celestiality-server.herokuapp.com/)
 
 ## Overview
   Our app, Celestiality, is designed for people who would like to learn more about their special day....their Birthday! It provides users information about: their astrological sign, their Chinese New Year Zodiac, and so much more!
@@ -62,11 +62,7 @@ User Story 5: Journal Entries
 
 ## Architecture
 
-REACTJS, JS, CSS
-
-## Change Log
-
-11-08-2021 8:30pm - Celestiality application backend and frontend are deployed.
+REACTJS, JS, MONGODB, Heroku, BootStrap, CSS
 
 ## Estimates
 
